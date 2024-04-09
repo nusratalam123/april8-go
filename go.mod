@@ -1,4 +1,4 @@
-module go-app/april8-go
+module mn128.com
 
 go 1.22.2
 

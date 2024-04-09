@@ -1,9 +1,14 @@
 package main
 
 import (
-	"fmt"
+	"github.com/gin-gonic/gin"
+
+	routes "mn128.com/src/shared"
 )
 
 func main() {
-	fmt.Println("Hello, World!")
+	router := gin.Default()
+	routes.UserRoutes(router)
+
+	router.Run(":8080")
 }
