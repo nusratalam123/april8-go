@@ -4,12 +4,11 @@ import (
 	"net/http"
 
 	"github.com/gin-gonic/gin"
-
-	model "mn128.com/src/model"
+	types "mn128.com/src/types"
 )
 
 func GetAllUsers(c *gin.Context) {
-	var users = []model.User{
+	var users = []types.User{
 		{
 			ID:             "1",
 			Name:           "Mahadi",

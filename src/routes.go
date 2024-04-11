@@ -1,9 +1,9 @@
-package routes
+package src
 
 import (
 	"github.com/gin-gonic/gin"
 
-	"mn128.com/src/controller"
+	controller "mn128.com/src/controller"
 )
 
 func UserRoutes(router *gin.Engine) {
