@@ -1,33 +1,38 @@
 package controller
 
 import (
-	"net/http"
-
 	"github.com/gin-gonic/gin"
-	types "mn128.com/src/types"
 )
 
-func GetAllUsers(c *gin.Context) {
-	var users = []types.User{
-		{
-			ID:             "1",
-			Name:           "Mahadi",
-			Email:          "pGwXO@example.com",
-			Password:       "12345",
-			Age:            23,
-			Img:            "jsdnjwdiwk",
-			DrivingLicense: "xyz123",
-			Role:           "driver",
-			Location:       "airport",
-			History:        []string{"1", "2", "3"},
-		},
-	}
+// type Tea struct {
+// 	Type   string
+// 	Rating int32
+// 	Vendor []string `bson:"vendor,omitempty" json:"vendor,omitempty"`
+// }
 
-	c.IndentedJSON(http.StatusOK, users)
+func GetAllUsers(c *gin.Context) {
+	//FIXME: use this for all db instance
+	// coll := client.GetDbInstance().Instance
+
+	// filter := bson.D{{"type", "Masala"}}
+	// cursor, err := coll.Find(context.TODO(), filter)
+	// if err != nil {
+	// 	println(err.Error())
+	// 	panic(err)
+	// }
+	// var results []Tea
+	// if err = cursor.All(context.TODO(), &results); err != nil {
+	// 	panic(err)
+	// }
+	// for _, result := range results {
+	// 	res, _ := bson.MarshalExtJSON(result, false, false)
+	// 	fmt.Println(string(res))
+	// }
+
+	// c.IndentedJSON(http.StatusOK, results)
 }
 
 func GetSingleUser(c *gin.Context) {
-
 }
 
 func Singup(c *gin.Context) {
