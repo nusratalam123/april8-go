@@ -33,7 +33,7 @@ func GetDbInstance() *singleton {
 	// 	}
 	// }()
 
-	coll := client.Database("db").Collection("tea")
+	coll := client.Database("db").Collection("user")
 
 	once.Do(func() {
 		instance = &singleton{Instance: coll}
